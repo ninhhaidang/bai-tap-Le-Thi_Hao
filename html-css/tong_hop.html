@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lê Thị Hảo - Tổng hợp tất cả bài tập HTML & CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .main-title {
+            color: #2c3e50;
+            text-align: center;
+            font-size: 32px;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 30px;
+        }
+
+        .section {
+            background-color: white;
+            margin: 30px 0;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            color: #e74c3c;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Bài 1 - Trang web đơn giản */
+        .simple-content {
+            text-align: center;
+        }
+
+        /* Bài 2 - Danh sách và liên kết */
+        .list-section ol,
+        .list-section ul {
+            margin: 15px 0;
+        }
+
+        .list-section a {
+            color: #3498db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .list-section a:hover {
+            color: #e74c3c;
+            text-decoration: underline;
+        }
+
+        /* Bài 3 - Biểu mẫu */
+        .form-section form {
+            max-width: 500px;
+        }
+
+        .form-section label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .form-section input[type="text"],
+        .form-section input[type="email"],
+        .form-section input[type="password"],
+        .form-section input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            border: 2px solid #bdc3c7;
+            border-radius: 4px;
+        }
+
+        .form-section input[type="submit"],
+        .form-section input[type="reset"] {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        .form-section input[type="submit"]:hover,
+        .form-section input[type="reset"]:hover {
+            background-color: #e74c3c;
+        }
+
+        /* Bài 4 - Bảng */
+        .table-section table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .table-section th,
+        .table-section td {
+            border: 1px solid #bdc3c7;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .table-section th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .table-section tr:nth-child(even) {
+            background-color: #ecf0f1;
+        }
+
+        /* Bài 5 - Video và Audio */
+        .media-section video,
+        .media-section audio,
+        .media-section iframe {
+            margin: 15px 0;
+            border-radius: 8px;
+        }
+
+        /* Bài 6 - Định dạng văn bản */
+        .text-format .center-text {
+            text-align: center;
+            color: #3498db;
+            font-size: 18px;
+        }
+
+        .text-format .right-text {
+            text-align: right;
+            color: #27ae60;
+            font-style: italic;
+        }
+
+        .text-format .bold-text {
+            font-weight: bold;
+            color: #8e44ad;
+        }
+
+        .text-format .underline-text {
+            text-decoration: underline;
+            color: #f39c12;
+        }
+
+        /* Bài 7 - Hiệu ứng hover */
+        .hover-effects .hover-button {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .hover-effects .hover-button:hover {
+            background-color: #e74c3c;
+            transform: scale(1.05);
+        }
+
+        .hover-effects .hover-text {
+            color: #2c3e50;
+            padding: 10px;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .hover-effects .hover-text:hover {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Bài 8 - Ẩn/hiện nội dung */
+        .hide-show .container {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .hide-show .hidden-content {
+            display: none;
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .hide-show .container:hover .hidden-content {
+            display: block;
+        }
+
+        .hide-show .toggle-box {
+            width: 200px;
+            height: 50px;
+            background-color: #e74c3c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 5px;
+        }
+
+        .hide-show .invisible-text {
+            opacity: 0;
+            background-color: #f39c12;
+            padding: 10px;
+            margin: 10px 0;
+            transition: opacity 0.5s ease;
+            border-radius: 5px;
+        }
+
+        .hide-show .toggle-box:hover+.invisible-text {
+            opacity: 1;
+        }
+
+        .hide-show .slide-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #2ecc71;
+            color: white;
+            padding: 0 15px;
+            transition: all 0.4s ease;
+        }
+
+        .hide-show .slide-trigger:hover+.slide-content {
+            max-height: 100px;
+            padding: 15px;
+        }
+
+        .hide-show .slide-trigger {
+            background-color: #34495e;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Navigation */
+        .nav-menu {
+            background-color: #2c3e50;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="main-title">Lê Thị Hảo - BÀI TẬP TỔNG HỢP HTML & CSS</h1>
+
+    <!-- Navigation Menu -->
+    <div class="nav-menu">
+        <a href="#bai1">Bài 1</a>
+        <a href="#bai2">Bài 2</a>
+        <a href="#bai3">Bài 3</a>
+        <a href="#bai4">Bài 4</a>
+        <a href="#bai5">Bài 5</a>
+        <a href="#bai6">Bài 6</a>
+        <a href="#bai7">Bài 7</a>
+        <a href="#bai8">Bài 8</a>
+    </div>
+
+    <!-- Bài 1: Trang web đơn giản -->
+    <div id="bai1" class="section">
+        <h2 class="section-title">BÀI 1: TRANG WEB ĐƠN GIẢN</h2>
+        <div class="simple-content">
+            <p>Trang web này được tạo bằng các thẻ HTML cơ bản nhất bao gồm tiêu đề, đoạn văn và hình ảnh.</p>
+            <img src="https://picsum.photos/300/200" alt="Hình ảnh mẫu" width="300" height="200"
+                style="border-radius: 10px;">
+            <p>Cảm ơn bạn đã ghé thăm trang web của tôi!</p>
+        </div>
+    </div>
+
+    <!-- Bài 2: Danh sách và liên kết -->
+    <div id="bai2" class="section list-section">
+        <h2 class="section-title">BÀI 2: DANH SÁCH VÀ LIÊN KẾT</h2>
+
+        <h3>Danh sách có thứ tự (Ordered List)</h3>
+        <p>Các bước học HTML cơ bản:</p>
+        <ol>
+            <li>Học cấu trúc HTML cơ bản</li>
+            <li>Tìm hiểu về các thẻ HTML</li>
+            <li>Thực hành tạo trang web đơn giản</li>
+            <li>Học CSS để trang trí trang web</li>
+            <li>Kết hợp HTML và CSS để tạo website hoàn chỉnh</li>
+        </ol>
+
+        <h3>Danh sách không thứ tự (Unordered List)</h3>
+        <p>Các thẻ HTML cơ bản cần biết:</p>
+        <ul>
+            <li>Thẻ tiêu đề: h1, h2, h3, h4, h5, h6</li>
+            <li>Thẻ đoạn văn: p</li>
+            <li>Thẻ hình ảnh: img</li>
+            <li>Thẻ liên kết: a</li>
+            <li>Thẻ danh sách: ul, ol, li</li>
+            <li>Thẻ div và span</li>
+        </ul>
+
+        <h3>Liên kết (Links)</h3>
+        <p>Dưới đây là một số liên kết hữu ích:</p>
+        <ul>
+            <li><a href="https://www.google.com" target="_blank">Google</a></li>
+            <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+        </ul>
+    </div>
+
+    <!-- Bài 3: Biểu mẫu nhập liệu -->
+    <div id="bai3" class="section form-section">
+        <h2 class="section-title">BÀI 3: BIỂU MẪU NHẬP LIỆU</h2>
+
+        <form>
+            <h2>Thông tin cá nhân</h2>
+
+            <label for="name">Họ và tên:</label><br>
+            <input type="text" id="name" name="name" placeholder="Nhập họ tên của bạn"><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="example@email.com"><br>
+
+            <label for="age">Tuổi:</label><br>
+            <input type="number" id="age" name="age" min="1" max="100"><br>
+
+            <label>Sở thích:</label><br>
+            <input type="checkbox" id="music" name="hobby" value="music">
+            <label for="music">Âm nhạc</label><br>
+            <input type="checkbox" id="sports" name="hobby" value="sports">
+            <label for="sports">Thể thao</label><br>
+            <input type="checkbox" id="reading" name="hobby" value="reading">
+            <label for="reading">Đọc sách</label><br><br>
+
+            <input type="submit" value="Gửi thông tin">
+            <input type="reset" value="Xóa form">
+        </form>
+    </div>
+
+    <!-- Bài 4: Bảng dữ liệu -->
+    <div id="bai4" class="section table-section">
+        <h2 class="section-title">BÀI 4: BẢNG DỮ LIỆU</h2>
+
+        <h3>Danh sách sinh viên</h3>
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Họ và tên</th>
+                <th>Tuổi</th>
+                <th>Lớp</th>
+                <th>Điểm TB</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Nguyễn Văn A</td>
+                <td>20</td>
+                <td>IT01</td>
+                <td>8.5</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Trần Thị B</td>
+                <td>19</td>
+                <td>IT02</td>
+                <td>9.0</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Lê Văn C</td>
+                <td>21</td>
+                <td>IT01</td>
+                <td>7.8</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Phạm Thị D</td>
+                <td>20</td>
+                <td>IT03</td>
+                <td>8.2</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Bài 5: Nhúng video và audio -->
+    <div id="bai5" class="section media-section">
+        <h2 class="section-title">BÀI 5: NHÚNG VIDEO VÀ AUDIO</h2>
+
+        <h2>Video</h2>
+        <video width="400" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+            Trình duyệt của bạn không hỗ trợ video HTML5.
+        </video>
+
+        <h2>Audio</h2>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg">
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Trình duyệt của bạn không hỗ trợ audio HTML5.
+        </audio>
+
+        <h2>Video từ YouTube (Nhúng)</h2>
+        <iframe width="943" height="530" src="https://www.youtube.com/embed/Zv1aeqWPUv8?list=RDZv1aeqWPUv8"
+            title="MỘT VÒNG VIỆT NAM (Around Viet Nam) - Tùng Dương | Official Lyric Video" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p><em>Lưu ý: Video YouTube cần kết nối internet để hiển thị</em></p>
+    </div>
+
+    <!-- Bài 6: Định dạng văn bản và màu sắc -->
+    <div id="bai6" class="section text-format">
+        <h2 class="section-title">BÀI 6: ĐỊNH DẠNG VĂN BẢN VÀ MÀU SẮC</h2>
+
+        <h3>Các kiểu định dạng văn bản</h3>
+
+        <p class="center-text">Văn bản căn giữa với màu xanh dương</p>
+
+        <p class="right-text">Văn bản căn phải với màu xanh lá và in nghiêng</p>
+
+        <p class="bold-text">Văn bản in đậm với màu tím</p>
+
+        <p class="underline-text">Văn bản gạch chân với màu cam</p>
+
+        <p style="color: #e74c3c; font-size: 20px;">Văn bản màu đỏ, cỡ chữ 20px</p>
+
+        <p style="background-color: #f1c40f; padding: 10px; border-radius: 5px;">Văn bản có nền màu vàng</p>
+    </div>
+
+    <!-- Bài 7: Tạo hiệu ứng hover -->
+    <div id="bai7" class="section hover-effects">
+        <h2 class="section-title">BÀI 7: TẠO HIỆU ỨNG HOVER</h2>
+
+        <h3>Nút với hiệu ứng hover</h3>
+        <button class="hover-button">Di chuột vào đây!</button>
+        <button class="hover-button">Nút thứ hai</button>
+
+        <h3>Văn bản với hiệu ứng hover</h3>
+        <p class="hover-text">Di chuột vào đoạn văn bản này để xem hiệu ứng!</p>
+    </div>
+
+    <!-- Bài 8: Ẩn/hiện nội dung với CSS -->
+    <div id="bai8" class="section hide-show">
+        <h2 class="section-title">BÀI 8: ẨN/HIỆN NỘI DUNG VỚI CSS</h2>
+
+        <h2>Ẩn/hiện khi hover</h2>
+        <div class="container">
+            <p><strong>Di chuột vào hộp này để xem nội dung ẩn!</strong></p>
+            <div class="hidden-content">
+                <p>🎉 Nội dung này đã được ẩn và chỉ hiện ra khi bạn di chuột vào!</p>
+            </div>
+        </div>
+
+        <h2>Hiệu ứng opacity</h2>
+        <div class="toggle-box">Hover vào tôi!</div>
+        <div class="invisible-text">
+            Văn bản này sẽ xuất hiện từ từ khi bạn hover vào hộp trên!
+        </div>
+
+        <h2>Hiệu ứng slide</h2>
+        <div class="slide-trigger">Click hoặc hover để mở rộng</div>
+        <div class="slide-content">
+            <p>Nội dung này sẽ trượt xuống một cách mượt mà!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="section"
+        style="text-align: center; background: linear-gradient(45deg, #3498db, #e74c3c); color: white;">
+        <h2>WEB TỔNG HỢP TẤT CẢ BÀI TẬP</h2>
+        <p><em>Lê Thị Hảo</em></p>
+    </div>
+
+</body>
+
+</html>

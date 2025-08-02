@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8 - Ẩn/hiện nội dung với CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .container {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #3498db;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .hidden-content {
+            display: none;
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .container:hover .hidden-content {
+            display: block;
+        }
+
+        .toggle-box {
+            width: 200px;
+            height: 50px;
+            background-color: #e74c3c;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .invisible-text {
+            opacity: 0;
+            background-color: #f39c12;
+            padding: 10px;
+            margin: 10px 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .toggle-box:hover+.invisible-text {
+            opacity: 1;
+        }
+
+        .slide-content {
+            max-height: 0;
+            overflow: hidden;
+            background-color: #2ecc71;
+            color: white;
+            padding: 0 15px;
+            transition: all 0.4s ease;
+        }
+
+        .slide-trigger:hover+.slide-content {
+            max-height: 100px;
+            padding: 15px;
+        }
+
+        .slide-trigger {
+            background-color: #34495e;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lê Thị Hảo - BÀI 8: ẨN/HIỆN NỘI DUNG VỚI CSS</h1>
+
+    <h2>Ẩn/hiện khi hover</h2>
+    <div class="container">
+        <p><strong>Di chuột vào hộp này để xem nội dung ẩn!</strong></p>
+        <div class="hidden-content">
+            <p>🎉 Nội dung này đã được ẩn và chỉ hiện ra khi bạn di chuột vào!</p>
+        </div>
+    </div>
+
+    <h2>Hiệu ứng opacity</h2>
+    <div class="toggle-box">Hover vào tôi!</div>
+    <div class="invisible-text">
+        Văn bản này sẽ xuất hiện từ từ khi bạn hover vào hộp trên!
+    </div>
+
+    <h2>Hiệu ứng slide</h2>
+    <div class="slide-trigger">Click hoặc hover để mở rộng</div>
+    <div class="slide-content">
+        <p>Nội dung này sẽ trượt xuống một cách mượt mà!</p>
+    </div>
+
+</body>
+
+</html>

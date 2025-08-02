@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7 - Tạo hiệu ứng hover</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .hover-button {
+            background-color: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hover-button:hover {
+            background-color: #e74c3c;
+        }
+
+        .hover-text {
+            color: #2c3e50;
+            padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .hover-text:hover {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .hover-box {
+            width: 200px;
+            height: 100px;
+            background-color: #95a5a6;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .hover-box:hover {
+            background-color: #f39c12;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lê Thị Hảo - BÀI 7: TẠO HIỆU ỨNG HOVER</h1>
+
+    <h2>Nút với hiệu ứng hover</h2>
+    <button class="hover-button">Di chuột vào đây!</button>
+    <button class="hover-button">Nút thứ hai</button>
+
+    <h2>Văn bản với hiệu ứng hover</h2>
+    <p class="hover-text">Di chuột vào đoạn văn bản này để xem hiệu ứng!</p>
+
+    <h2>Hộp với hiệu ứng hover</h2>
+    <div class="hover-box">
+        <span style="color: white;">Hover vào tôi!</span>
+    </div>
+
+</body>
+
+</html>
