@@ -1,0 +1,395 @@
+/* =================================
+   STYLES.CSS - CSS chung cho tất cả bài tập
+   Lê Thị Hảo - HTML & CSS
+   ================================= */
+
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #e74c3c;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+h3 {
+    color: #3498db;
+    margin-top: 15px;
+}
+
+/* ===== TỔNG HỢP STYLES ===== */
+.main-title {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 32px;
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+}
+
+.section {
+    background-color: white;
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    color: #e74c3c;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* ===== NAVIGATION ===== */
+.nav-menu {
+    background-color: #2c3e50;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    background-color: #3498db;
+}
+
+/* ===== BÀI 1 - TRANG WEB ĐƠN GIẢN ===== */
+.simple-content {
+    text-align: center;
+}
+
+.simple-content img {
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+/* ===== BÀI 2 - DANH SÁCH VÀ LIÊN KẾT ===== */
+.list-section ol,
+.list-section ul {
+    margin: 15px 0;
+}
+
+.list-section a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.list-section a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* ===== BÀI 3 - BIỂU MẪU ===== */
+.form-section form {
+    max-width: 500px;
+}
+
+.form-section label {
+    font-weight: bold;
+    color: #2c3e50;
+    display: block;
+    margin-top: 10px;
+}
+
+.form-section input[type="text"],
+.form-section input[type="email"],
+.form-section input[type="password"],
+.form-section input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px 0;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-section input[type="submit"],
+.form-section input[type="reset"] {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.form-section input[type="submit"]:hover,
+.form-section input[type="reset"]:hover {
+    background-color: #e74c3c;
+}
+
+.form-section input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* ===== BÀI 4 - BẢNG ===== */
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.table-section th,
+.table-section td {
+    border: 1px solid #bdc3c7;
+    padding: 12px;
+    text-align: left;
+}
+
+.table-section th {
+    background-color: #3498db;
+    color: white;
+}
+
+.table-section tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+/* ===== BÀI 5 - MEDIA ===== */
+.media-section video,
+.media-section audio,
+.media-section iframe {
+    margin: 15px 0;
+    border-radius: 8px;
+}
+
+.media-section iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ===== BÀI 6 - ĐỊNH DẠNG VĂN BẢN ===== */
+.text-format .center-text,
+.center-text {
+    text-align: center;
+    color: #3498db;
+    font-size: 18px;
+}
+
+.text-format .right-text,
+.right-text {
+    text-align: right;
+    color: #27ae60;
+    font-style: italic;
+}
+
+.text-format .bold-text,
+.bold-text {
+    font-weight: bold;
+    color: #8e44ad;
+}
+
+.text-format .underline-text,
+.underline-text {
+    text-decoration: underline;
+    color: #f39c12;
+}
+
+/* ===== BÀI 7 - HIỆU ỨNG HOVER ===== */
+.hover-effects .hover-button,
+.hover-button {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+.hover-effects .hover-button:hover,
+.hover-button:hover {
+    background-color: #e74c3c;
+    transform: scale(1.05);
+}
+
+.hover-effects .hover-text,
+.hover-text {
+    color: #2c3e50;
+    padding: 10px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.hover-effects .hover-text:hover,
+.hover-text:hover {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.hover-box {
+    width: 200px;
+    height: 100px;
+    background-color: #95a5a6;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.hover-box:hover {
+    background-color: #f39c12;
+    transform: scale(1.1);
+}
+
+/* ===== BÀI 8 - ẨN/HIỆN NỘI DUNG ===== */
+.hide-show .container,
+.container {
+    margin: 20px 0;
+    padding: 20px;
+    border: 2px solid #3498db;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hide-show .hidden-content,
+.hidden-content {
+    display: none;
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.hide-show .container:hover .hidden-content,
+.container:hover .hidden-content {
+    display: block;
+}
+
+.hide-show .toggle-box,
+.toggle-box {
+    width: 200px;
+    height: 50px;
+    background-color: #e74c3c;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.hide-show .invisible-text,
+.invisible-text {
+    opacity: 0;
+    background-color: #f39c12;
+    padding: 10px;
+    margin: 10px 0;
+    transition: opacity 0.5s ease;
+    border-radius: 5px;
+}
+
+.hide-show .toggle-box:hover+.invisible-text,
+.toggle-box:hover+.invisible-text {
+    opacity: 1;
+}
+
+.hide-show .slide-content,
+.slide-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #2ecc71;
+    color: white;
+    padding: 0 15px;
+    transition: all 0.4s ease;
+}
+
+.hide-show .slide-trigger:hover+.slide-content,
+.slide-trigger:hover+.slide-content {
+    max-height: 100px;
+    padding: 15px;
+}
+
+.hide-show .slide-trigger,
+.slide-trigger {
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .section {
+        padding: 15px;
+        margin: 15px 0;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .nav-menu a {
+        margin: 5px;
+        display: inline-block;
+    }
+
+    .media-section iframe {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+/* ===== UTILITIES ===== */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+.margin-bottom {
+    margin-bottom: 20px;
+}
